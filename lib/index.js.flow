@@ -3,7 +3,10 @@
 declare function replace(
   str: string,
   query: string | RegExp,
-  replacement: string | (...match: Array<string>) => string
+  replacement: string | (...match: Array<string>) => string,
+  options?: {
+    caseTypes?: Array<string>,
+  }
 ): string;
 
 declare module.exports: typeof replace;
