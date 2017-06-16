@@ -35,9 +35,9 @@ replace(
 ): string`
 ```
 
-Works exactly like `string.replace(query, replacement)`, except that:
+Works exactly like `str.replace(query, replacement)`, except that:
 * it preserves the case of what it replaces (using the marvelous `case` package)
-* if `query` is a string, it searches for the first occurrence regardless of case.  (Under the hood, it creates and uses
+* if `query` is a string, it matches `query` in any case.  (Under the hood, it creates and uses
   a `RegExp` with all `caseTypes` of `query` joined together, e.g.
   `str.replace(/foo bar|FOO BAR|fooBar|FooBar|.../, ...)`)
 
