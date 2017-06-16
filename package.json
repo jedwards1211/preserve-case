@@ -1,5 +1,5 @@
 {
-  "name": "case-preserving-replace",
+  "name": "preserve-case",
   "version": "0.0.0-development",
   "description": "case-preserving string.replace",
   "main": "lib/index.js",
@@ -9,7 +9,7 @@
     "lint:watch": "esw --watch lib test",
     "flow": "flow",
     "flow:coverage": "for file in lib/**.js test/**.js; do echo $file; flow coverage $file; done",
-    "flow:watch": "flow-watch -e js,js.flow,flowconfig --ignore lib/ --ignore node_modules/ --watch .flowconfig --watch lib/ --watch test/",
+    "flow:watch": "flow-watch -e js,js.flow,flowconfig --ignore node_modules/ --watch .flowconfig --watch lib/ --watch test/",
     "test": "NODE_ENV=production BABEL_ENV=test nyc --reporter=lcov --reporter=text mocha $npm_package_config_mocha",
     "test:watch": "mocha --watch $npm_package_config_mocha",
     "commitmsg": "validate-commit-msg",
@@ -32,7 +32,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jedwards1211/case-preserving-replace.git"
+    "url": "https://github.com/jedwards1211/preserve-case.git"
   },
   "keywords": [
     "es5"
@@ -40,9 +40,9 @@
   "author": "Andy Edwards",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jedwards1211/case-preserving-replace/issues"
+    "url": "https://github.com/jedwards1211/preserve-case/issues"
   },
-  "homepage": "https://github.com/jedwards1211/case-preserving-replace#readme",
+  "homepage": "https://github.com/jedwards1211/preserve-case#readme",
   "devDependencies": {
     "@jedwards1211/eslint-config-es5": "^1.0.0",
     "@jedwards1211/eslint-config-flow": "^1.0.0",
