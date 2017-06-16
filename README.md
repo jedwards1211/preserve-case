@@ -16,7 +16,7 @@ npm install --save preserve-case
 ```js
 import replace from 'preserve-case'
 
-console.log(replace('foo bar FOO_BAR foo-bar fooBar foo-Bar', 'foo bar', 'baz qux'))
+console.log(replace.all('foo bar FOO_BAR foo-bar fooBar foo-Bar', 'foo bar', 'baz qux'))
 // baz qux BAZ_QUX baz-qux bazQux baz-Qux
 ```
 
@@ -37,7 +37,9 @@ replace(
 
 Works exactly like `string.replace(query, replacement)`, except that:
 * it preserves the case of what it replaces (using the marvelous `case` package)
-* if `query` is a string, it searches for the first occurrence regardless of case.
+* if `query` is a string, it searches for the first occurrence regardless of case.  (Under the hood, it creates and uses
+  a `RegExp` with all `caseTypes` of `query` joined together, e.g.
+  `str.replace(/foo bar|FOO BAR|fooBar|FooBar|.../, ...)`)
 
 `options.caseTypes` defaults to all types built into the [`case`](https://github.com/nbubna/Case) package.
 This may be more than you want, so look into it.  For instance, the other cases of 'foo bar' include, but may not be
