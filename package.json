@@ -61,5 +61,8 @@
     "rimraf": "^2.6.1",
     "semantic-release": "^6.3.6",
     "validate-commit-msg": "^2.11.2"
+  },
+  "dependencies": {
+    "case": "^1.5.2"
   }
 }

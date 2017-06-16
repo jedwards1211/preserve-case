@@ -1,3 +1,9 @@
 // @flow
 
-declare module.exports: {};
+declare function replace(
+  str: string,
+  query: string | RegExp,
+  replacement: string | (...match: Array<string>) => string
+): string;
+
+declare module.exports: typeof replace;
