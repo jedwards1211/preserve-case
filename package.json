@@ -12,6 +12,7 @@
     "flow:watch": "flow-watch -e js,js.flow,flowconfig --ignore lib/ --ignore node_modules/ --watch .flowconfig --watch lib/ --watch test/",
     "test": "NODE_ENV=production BABEL_ENV=test nyc --reporter=lcov --reporter=text mocha $npm_package_config_mocha",
     "test:watch": "mocha --watch $npm_package_config_mocha",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov; codecov",
     "commitmsg": "validate-commit-msg",
     "precommit": "npm run lint && flow",
     "prepush": "npm test",
@@ -48,7 +49,6 @@
     "@jedwards1211/eslint-config-flow": "^1.0.0",
     "chai": "^3.5.0",
     "copy": "^0.3.0",
-    "coveralls": "^2.13.0",
     "eslint": "^3.18.0",
     "eslint-plugin-flowtype": "^2.30.4",
     "eslint-watch": "^3.0.1",
@@ -61,5 +61,8 @@
     "rimraf": "^2.6.1",
     "semantic-release": "^6.3.6",
     "validate-commit-msg": "^2.11.2"
+  },
+  "dependencies": {
+    "codecov": "^2.3.0"
   }
 }
