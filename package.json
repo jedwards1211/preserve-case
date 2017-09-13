@@ -49,6 +49,7 @@
     "@jedwards1211/eslint-config-flow": "^1.0.0",
     "chai": "^3.5.0",
     "copy": "^0.3.0",
+    "codecov": "^2.3.0",
     "eslint": "^3.18.0",
     "eslint-plugin-flowtype": "^2.30.4",
     "eslint-watch": "^3.0.1",
@@ -61,8 +62,5 @@
     "rimraf": "^2.6.1",
     "semantic-release": "^6.3.6",
     "validate-commit-msg": "^2.11.2"
-  },
-  "dependencies": {
-    "codecov": "^2.3.0"
   }
 }
