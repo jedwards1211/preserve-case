@@ -16,9 +16,10 @@
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "precommit": "npm run lint && flow",
     "prepush": "npm test",
-    "prepublish": "npm run lint && flow && npm test",
+    "prepublishOnly": "npm run lint && flow && npm test",
     "open:coverage": "open coverage/lcov-report/index.html",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "config": {
     "mocha": "./test/**/*.js",
@@ -45,23 +46,24 @@
   },
   "homepage": "https://github.com/jedwards1211/es5-library-skeleton#readme",
   "devDependencies": {
-    "@commitlint/cli": "^5.2.5",
-    "@commitlint/config-conventional": "^5.2.3",
+    "@commitlint/cli": "^6.0.2",
+    "@commitlint/config-conventional": "^6.0.2",
     "@jedwards1211/eslint-config-es5": "^1.0.0",
     "@jedwards1211/eslint-config-flow": "^1.0.0",
-    "chai": "^3.5.0",
-    "codecov": "^2.3.0",
+    "chai": "^4.1.2",
+    "codecov": "^3.0.0",
     "copy": "^0.3.0",
     "eslint": "^3.18.0",
     "eslint-plugin-flowtype": "^2.30.4",
     "eslint-watch": "^3.0.1",
-    "flow-bin": "^0.42.0",
+    "flow-bin": "^0.63.1",
     "flow-watch": "^1.1.1",
-    "husky": "^0.13.3",
+    "husky": "^0.14.3",
     "istanbul": "^0.4.5",
-    "mocha": "^3.2.0",
-    "nyc": "^10.2.0",
+    "mocha": "^4.1.0",
+    "nyc": "^11.4.1",
     "rimraf": "^2.6.1",
-    "semantic-release": "^11.0.0"
+    "semantic-release": "^12.2.2",
+    "travis-deploy-once": "^4.3.1"
   }
 }
