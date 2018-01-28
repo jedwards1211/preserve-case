@@ -5,3 +5,7 @@ node_modules
 .eslintrc
 .flowconfig
 .travis.yml
+solano.yml
+.eslintcache
+.idea
+commitlint.config.js
