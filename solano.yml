@@ -47,6 +47,8 @@ hooks:
       echo "Will only deploy on 'node_8' profile"
       exit
     fi
+    # fetch tags
+    git fetch origin 'refs/tags/*:refs/tags/*' -v
     npm run codecov && npm run semantic-release
 
 tests:
