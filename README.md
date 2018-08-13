@@ -65,3 +65,9 @@ a `RegExp` without the `g` (global) flag.
 ## Acknowledgements
 
 Thanks to Nathan Bubna for his [`case`](https://github.com/nbubna/Case) package, which powers `preserve-case`!
+
+### `replace.createSearchRegExp(query, [options])`
+
+Creates a `RegExp` that matches for any case of the given `query` string.
+Like the other functions, `options.caseTypes` defaults to all types built into
+the [`case`](https://github.com/nbubna/Case) package.
