@@ -24,10 +24,10 @@ describe('replace', function () {
       replace(
         '  foo bar   FOO_BAR  baz_bar  fooBaz ',
         /(foo|bar|baz)[-_ ]?(foo|bar|baz)/i,
-        '$2 $1'
+        '$2 $1 $0 $3'
       )
     ).to.equal(
-      '  bar foo   FOO_BAR  baz_bar  fooBaz '
+      '  bar foo $0 $3   FOO_BAR  baz_bar  fooBaz '
     )
 
     expect(
