@@ -71,3 +71,5 @@ Thanks to Nathan Bubna for his [`case`](https://github.com/nbubna/Case) package,
 Creates a `RegExp` that matches for any case of the given `query` string.
 Like the other functions, `options.caseTypes` defaults to all types built into
 the [`case`](https://github.com/nbubna/Case) package.
+
+You may also pass a `flags` option for the `RegExp` flags (e.g. `flags: 'g'`)

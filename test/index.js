@@ -71,6 +71,13 @@ describe('replace', function () {
       'hello World'
     )
   })
+  it('works on non-ASCII characters', function () {
+    expect(
+      replace('Fûo-Bar', 'Fûo-Bar', 'hello ûorld')
+    ).to.equal(
+      'Hello-Ûorld'
+    )
+  })
 })
 
 describe('replace.all', function () {
