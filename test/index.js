@@ -23,6 +23,26 @@ describe('replace', function () {
     expect(
       replace(
         '  foo bar   FOO_BAR  baz_bar  fooBaz ',
+        /(foo|bar|baz)[-_ ]?(foo|bar|baz)/i,
+        '$2 $1'
+      )
+    ).to.equal(
+      '  bar foo   FOO_BAR  baz_bar  fooBaz '
+    )
+
+    expect(
+      replace(
+        '  foo bar   FOO_BAR  baz_bar  fooBaz ',
+        /(foo|bar|baz)[-_ ]?(foo|bar|baz)/i,
+        '$2 $1 $$ $\' $` $&'
+      )
+    ).to.equal(
+      '  bar foo $    foo_bar  baz_bar  foobaz     foo bar   FOO_BAR  baz_bar  fooBaz '
+    )
+
+    expect(
+      replace(
+        '  foo bar   FOO_BAR  baz_bar  fooBaz ',
         /(foo|bar|baz)[-_ ]?(foo|bar|baz)/ig,
         function (_, a, b) { return b + ' ' + a }
       )
